@@ -1,0 +1,29 @@
+* text=auto eol=lf
+
+*.ts text
+*.tsx text
+*.cjs text
+*.css text
+*.html text
+*.json text
+*.md text
+*.swift text
+*.kt text
+*.kts text
+*.plist text
+*.xml text
+*.yml text
+*.yaml text
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.mp4 binary
+*.mov binary
+*.mp3 binary
+*.wav binary
+*.apk binary
+*.dmg binary
+*.exe binary

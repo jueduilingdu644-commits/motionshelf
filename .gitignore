@@ -1,0 +1,62 @@
+# JavaScript dependencies and package-manager caches
+node_modules/
+.pnpm-store/
+.npm/
+.yarn/
+
+# Vite / TypeScript / Electron build output
+dist/
+.vite/
+*.tsbuildinfo
+out/
+
+# Desktop installers and release staging files. Publish these via GitHub Releases.
+release/
+*.dmg
+*.dmg.blockmap
+*.exe
+*.msi
+*.app
+*.zip
+*.apk
+
+# Android / Gradle generated state
+android/.gradle/
+android/.kotlin/
+android/**/build/
+android/local.properties
+android/**/captures/
+android/**/outputs/
+android/**/intermediates/
+android/**/generated/
+android/**/tmp/
+*.keystore
+*.jks
+
+# Xcode / Swift Package Manager generated state
+DerivedData/
+ios/**/DerivedData/
+ios/**/build/
+ios/**/xcuserdata/
+*.xcuserstate
+.swiftpm/
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.mobileprovision
+
+# OS/editor metadata
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Generated video / media exports that are not part of the application source
+outputs/
+
+# Internal planning notes are useful locally but are not part of the public API
+docs/superpowers/

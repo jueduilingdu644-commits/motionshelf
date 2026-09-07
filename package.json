@@ -1,0 +1,72 @@
+{
+  "name": "motionshelf",
+  "version": "0.5.2",
+  "private": true,
+  "type": "module",
+  "main": "electron/main.cjs",
+  "description": "A local-first photo manager for Live Photo and Motion Photo libraries.",
+  "author": "MotionShelf",
+  "packageManager": "pnpm@11.19.0",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "dev": "concurrently -k \"node scripts/vite.cjs --host 127.0.0.1\" \"wait-on http://127.0.0.1:5173 && electron .\"",
+    "dev:web": "node scripts/vite.cjs --host 127.0.0.1",
+    "dev:desktop": "electron .",
+    "build": "tsc -b && node scripts/vite.cjs build",
+    "preview": "vite preview",
+    "dist": "npm run build && electron-builder"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "^2.1.7",
+    "exifr": "^7.1.3",
+    "heic-convert": "^2.1.0",
+    "qrcode": "^1.5.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/qrcode": "^1.5.5",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "electron": "^34.3.3",
+    "electron-builder": "^25.1.8",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5",
+    "vitest": "^5.0.0",
+    "wait-on": "^8.0.3"
+  },
+  "build": {
+    "appId": "com.motionshelf.desktop",
+    "productName": "MotionShelf",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "npmRebuild": false,
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
