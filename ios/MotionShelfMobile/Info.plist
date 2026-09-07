@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDisplayName</key>
+	<string>MotionShelf</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleName</key>
+	<string>MotionShelf</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.2.1</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>MotionShelf 使用相机扫描电脑上的传输二维码。</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>MotionShelf 需要访问你选择的照片，以保留 Live Photo 的照片和动态视频原始资源。</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>MotionShelf 需要访问本地网络，把你选择的照片直接传到同一 Wi‑Fi 下的电脑。</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.motionshelf.mobile.transfer</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>motionshelf</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

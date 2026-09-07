@@ -1,0 +1,19 @@
+name: MotionShelfMobile
+options:
+  bundleIdPrefix: com.motionshelf
+  deploymentTarget:
+    iOS: "16.0"
+targets:
+  MotionShelfMobile:
+    type: application
+    platform: iOS
+    sources:
+      - path: MotionShelfMobile
+    info:
+      path: MotionShelfMobile/Info.plist
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.motionshelf.mobile
+        SWIFT_VERSION: 5.9
+        TARGETED_DEVICE_FAMILY: "1"
+        SUPPORTS_MACCATALYST: NO
